@@ -22,6 +22,7 @@ public class Apartamento extends Moradia {
 
     @Override
     public void realizarInspecao() {
+        System.out.println("---- Visitando AP --------");
         System.out.println("Conferir valor do condomínio");
         System.out.println("Permite pets?");
         System.out.println("Vizinhos barulhentos?");

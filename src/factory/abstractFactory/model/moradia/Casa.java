@@ -19,6 +19,7 @@ public class Casa extends Moradia {
 
     @Override
     public void realizarInspecao() {
+        System.out.println("---- Visitando Casa --------");
         System.out.println("Avaliar área externa");
         System.out.println("Analisar telhado");
         System.out.println("Conferir pintura externa");

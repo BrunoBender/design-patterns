@@ -8,6 +8,7 @@ public class Garagem extends VagaCarro {
 
     @Override
     public void realizarInspecao() {
+        System.out.println("---- Conferindo garagem da casa --------");
         System.out.println("Conferir portão");
         System.out.println("Tem depósito?");
         System.out.println("Analizar possíveis goteiras");

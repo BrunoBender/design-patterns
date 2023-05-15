@@ -1,12 +1,14 @@
 package factory.abstractFactory.factor;
 
 import factory.abstractFactory.model.moradia.Casa;
+import factory.abstractFactory.model.moradia.Moradia;
 import factory.abstractFactory.model.vagaCarro.Garagem;
+import factory.abstractFactory.model.vagaCarro.VagaCarro;
 
-public abstract class  MudancaSubUrbanaAbstractFactory extends MudancaAbstractFactory {
+public class  MudancaSubUrbanaAbstractFactory extends MudancaAbstractFactory {
 
-    public MudancaSubUrbanaAbstractFactory(String apelidoCasa, String descricaoGaragem) {
-
+    @Override
+    Moradia obterMoradia(String apelidoMoradia) {
         boolean hasQuintal = true;
         int qtdAndares = 1;
         int qtdQuartos = 2;
@@ -14,16 +16,21 @@ public abstract class  MudancaSubUrbanaAbstractFactory extends MudancaAbstractFa
         boolean hasSalaDeEstar = false;
 
         Casa casa = new Casa(hasQuintal,
-         qtdAndares,
-         apelidoCasa,
-         qtdQuartos,
-         qtdBanheiros,
-         hasSalaDeEstar);
+                qtdAndares,
+                apelidoMoradia,
+                qtdQuartos,
+                qtdBanheiros,
+                hasSalaDeEstar);
 
+        return casa;
+    }
+
+    @Override
+    VagaCarro obterVagaCarro(String descricaoVagaCarro) {
         double metrosQuadrados = 110;
 
-        Garagem garagem = new Garagem(descricaoGaragem, metrosQuadrados);
-
+        Garagem garagem = new Garagem(descricaoVagaCarro, metrosQuadrados);
+        return garagem;
     }
 
 }
