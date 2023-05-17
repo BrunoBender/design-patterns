@@ -16,3 +16,5 @@ Testando principais padrões de design de software do mercado.
 ## Bridge
 ![image](https://github.com/BrunoBender/design-patterns/assets/69349855/504611d5-942d-41dc-a70e-e7da4204f861)
 
+## Decorator
+![img.png](img.png)
